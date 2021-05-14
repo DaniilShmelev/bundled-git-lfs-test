@@ -7,6 +7,6 @@ parameters:
   default: false
 
 steps:
-- bash: export System.PreferGitFromPath=${ parameters.preferGitFromPath }
+- bash: export System.PreferGitFromPath="${ parameters.preferGitFromPath }"
 - checkout: self
   lfs: true
