@@ -1,12 +1,5 @@
 pool: Windows
 
-parameters:
-- name: preferGitFromPath
-  displayName: 'Prefer git from path'
-  type: boolean
-  default: false
-
 steps:
-- powershell: echo '##vso[task.setvariable variable=System.PreferGitFromPath]${{ parameters.preferGitFromPath }}'
 - checkout: self
   lfs: true
