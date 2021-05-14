@@ -1,5 +1,11 @@
 pool: Windows
 
+parameters:
+- name: preferGitFromPath
+  displayName: 'Prefer git from path'
+  type: boolean
+
 steps:
+- bash: export System.PreferGitFromPath=${ parameters.preferGitFromPath }
 - checkout: self
   lfs: true
