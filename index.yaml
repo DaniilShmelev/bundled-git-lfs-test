@@ -4,6 +4,7 @@ parameters:
 - name: preferGitFromPath
   displayName: 'Prefer git from path'
   type: boolean
+  default: false
 
 steps:
 - bash: export System.PreferGitFromPath=${ parameters.preferGitFromPath }
